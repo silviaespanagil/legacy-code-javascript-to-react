@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 79px;
+  padding-bottom: 29px;
+  padding-top: 30px;
+
+  @media all and (min-width: 768px) {
+    padding-top: 31px;
+    padding-left: 41px;
+    justify-content: flex-start;
+    background-color: white;
+  }
+
+  &__imag {
+    width: 170px;
+  }
+}
