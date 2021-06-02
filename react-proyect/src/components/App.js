@@ -6,11 +6,11 @@ import Footer from "./Footer.js";
 function App() {
   return (
     <>
-      <body className="cards-page">
+      <div className="cards-page">
         <Header />
         <Main />
         <Footer />
-      </body>
+      </div>
       ;
     </>
   );
