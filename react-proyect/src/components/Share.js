@@ -2,11 +2,23 @@ import React from "react";
 import "../stylesheets/App.scss";
 
 class Share extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { className: "collapsible--close" };
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    this.props.handleClick();
+  }
   render() {
     return (
       <>
         <section className="share__container">
-          <div className="share js-collapsible-header">
+          <div
+            onClick={this.handleOnClick}
+            className="share js-collapsible-header"
+          >
             <div className="share__header">
               <i
                 className="share__header--icon fas fa-share-alt"
@@ -19,7 +31,7 @@ class Share extends React.Component {
             </span>
           </div>
 
-          <div className="js-collapsible collapsible--close">
+          <div className={`js-collapsible ${this.props.state.className}`}>
             <div className="share__create">
               <button
                 className="share__create--button js-create-btn"

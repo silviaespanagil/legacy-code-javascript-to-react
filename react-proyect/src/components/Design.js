@@ -6,17 +6,11 @@ class Design extends React.Component {
   constructor(props) {
     super(props);
     this.state = { className: "collapsible--close" };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
-  handleClick() {
-    console.log("hice clic");
-    this.setState((prevState) => {
-      let changeClass =
-        prevState.className === "collapsible--close"
-          ? "collapsible--open"
-          : "collapsible--close";
-      return { className: changeClass };
-    });
+
+  handleOnClick() {
+    this.props.handleClick();
   }
   render() {
     return (
@@ -24,7 +18,7 @@ class Design extends React.Component {
         <section className="section__design">
           <div
             className="section__design--contain js-collapsible-header"
-            onClick={this.handleClick}
+            onClick={this.handleOnClick}
           >
             <h2 className="section__design--title">
               <i className="far fa-object-ungroup icon--design"></i>
@@ -35,7 +29,7 @@ class Design extends React.Component {
             </span>
           </div>
           <div
-            className={`section__design--box js-collapsible ${this.state.className}`}
+            className={`section__design--box js-collapsible ${this.props.state.className}`}
           >
             <h3 className="section__design--subtitle">Colores</h3>
 
