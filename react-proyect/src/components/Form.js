@@ -7,7 +7,7 @@ import "../stylesheets/App.scss";
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { className: "" };
+    this.state = { className: "collapsible--close" };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
@@ -25,9 +25,9 @@ class Form extends React.Component {
       <>
         <section className="sectionForm">
           <form className="main-cards__form">
-            <Design handleClick={this.handleClick} state={this.state} />
-            <Fill handleClick={this.handleClick} state={this.state} />
-            <Share handleClick={this.handleClick} state={this.state} />
+            <Design /*handleClick={this.handleClick} state={this.state} */ />
+            <Fill />
+            <Share />
           </form>
         </section>
       </>

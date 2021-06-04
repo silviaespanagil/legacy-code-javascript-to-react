@@ -5,18 +5,33 @@ class Share extends React.Component {
   constructor(props) {
     super(props);
     this.state = { className: "collapsible--close" };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    console.log("hice clic");
+    this.setState((prevState) => {
+      let changeClass =
+        prevState.className === "collapsible--close"
+          ? "collapsible--open"
+          : "collapsible--close";
+      return { className: changeClass };
+    });
+  }
+  /*constructor(props) {
+    super(props);
+    this.state = { className: this.props.state.className };
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnClick() {
     this.props.handleClick();
-  }
+  }*/
   render() {
     return (
       <>
         <section className="share__container">
           <div
-            onClick={this.handleOnClick}
+            onClick={this.handleClick}
             className="share js-collapsible-header"
           >
             <div className="share__header">
@@ -31,7 +46,7 @@ class Share extends React.Component {
             </span>
           </div>
 
-          <div className={`js-collapsible ${this.props.state.className}`}>
+          <div className={`js-collapsible ${this.state.className}`}>
             <div className="share__create">
               <button
                 className="share__create--button js-create-btn"

@@ -5,12 +5,18 @@ import "../stylesheets/App.scss";
 class Design extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { className: "collapsible--close" };
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.state = { className: "collapsible--open" };
+    this.handleClick = this.handleClick.bind(this);
   }
-
-  handleOnClick() {
-    this.props.handleClick();
+  handleClick() {
+    console.log("hice clic");
+    this.setState((prevState) => {
+      let changeClass =
+        prevState.className === "collapsible--close"
+          ? "collapsible--open"
+          : "collapsible--close";
+      return { className: changeClass };
+    });
   }
   render() {
     return (
@@ -18,7 +24,7 @@ class Design extends React.Component {
         <section className="section__design">
           <div
             className="section__design--contain js-collapsible-header"
-            onClick={this.handleOnClick}
+            onClick={this.handleClick}
           >
             <h2 className="section__design--title">
               <i className="far fa-object-ungroup icon--design"></i>
@@ -29,7 +35,7 @@ class Design extends React.Component {
             </span>
           </div>
           <div
-            className={`section__design--box js-collapsible ${this.props.state.className}`}
+            className={`section__design--box js-collapsible ${this.state.className}`}
           >
             <h3 className="section__design--subtitle">Colores</h3>
 

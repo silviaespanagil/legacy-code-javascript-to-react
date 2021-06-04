@@ -2,11 +2,29 @@ import React from "react";
 import "../stylesheets/App.scss";
 
 class Fill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { className: "collapsible--close" };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    console.log("hice clic");
+    this.setState((prevState) => {
+      let changeClass =
+        prevState.className === "collapsible--close"
+          ? "collapsible--open"
+          : "collapsible--close";
+      return { className: changeClass };
+    });
+  }
   render() {
     return (
       <>
         <section className="formf" id="reset">
-          <div className="formf__fill js-collapsible-header">
+          <div
+            className="formf__fill js-collapsible-header"
+            onClick={this.handleClick}
+          >
             <div className="formf__fill--icon">
               <i className="far fa-keyboard"></i>
               <h2 className="formf__fill--title">rellena</h2>
@@ -15,7 +33,7 @@ class Fill extends React.Component {
               <i className="fa fa-chevron-down js-arrow"></i>
             </span>
           </div>
-          <div className="js-collapsible collapsible--close">
+          <div className={` js-collapsible ${this.state.className}`}>
             <section className="formf__box js-fillform" action="" method="POST">
               <label for="full-name">Nombre completo</label>
               <input
