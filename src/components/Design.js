@@ -3,24 +3,24 @@ import Palettes from "./Palettes.js";
 import "../stylesheets/App.scss";
 
 function Design(props) {
-  //desplegable por props desde el componente raiz form
-  /* const [className, setClassName] = useState("collapsible--close");
+  //desplegable
+  const [className, setClassName] = useState("collapsible--close");
 
   const handleClick = () => {
     console.log("hice clic");
     setClassName((prevState) => {
       let changeClass =
         prevState.className === "collapsible--close"
-         
+          ? "collapsible--open"
           : "collapsible--close";
       return { className: changeClass };
     });
-  };*/
+  };
 
   //Fin desplegable
   return (
     <>
-      <section className="section__design" onClick={props.handlerCollapsable}>
+      <section className="section__design" onClick={handleClick}>
         <div className="section__design--contain js-collapsible-header">
           <h2 className="section__design--title">
             <i className="far fa-object-ungroup icon--design"></i>
@@ -30,9 +30,7 @@ function Design(props) {
             <i className="fa fa-chevron-down js-arrow"></i>
           </span>
         </div>
-        <div
-          className={`section__design--box js-collapsible ${props.className}`}
-        >
+        <div className={`section__design--box js-collapsible ${className}`}>
           <h3 className="section__design--subtitle">Colores</h3>
 
           <Palettes />
