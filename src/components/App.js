@@ -1,4 +1,5 @@
 import "../stylesheets/App.scss";
+import React, { useState } from "react";
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
