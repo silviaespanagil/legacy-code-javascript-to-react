@@ -9,7 +9,7 @@ function Form(props) {
     <>
       <section className="sectionForm">
         <form className="main-cards__form">
-          <Design />
+          <Design handlePalette={props.handlePalette} />
           <Fill />
           <Share />
         </form>

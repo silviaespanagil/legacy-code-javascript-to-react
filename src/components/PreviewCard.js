@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/App.scss";
 
-function CardPreview() {
+function CardPreview(props) {
   return (
     <>
       <section className="section__photo">
@@ -9,8 +9,12 @@ function CardPreview() {
           <i className="far fa-trash-alt icongarbage"></i>reset
         </button>
         <article className="section__photo--card">
-          <div className="section__photo--boxnamejob border-palette-g2">
-            <h3 className="section__photo--name js-photoFullName color-pallete-g1">
+          <div
+            className={`section__photo--boxnamejob border-palette-${props.paletteValue}2`}
+          >
+            <h3
+              className={`section__photo--name js-photoFullName   color-palette-${props.paletteValue}1`}
+            >
               nombre apellido
             </h3>
             <h4 className="section__photo--job js-photoJob">
@@ -26,40 +30,56 @@ function CardPreview() {
 
           <nav className="section__photo--nav">
             <ul className="section__photo--list">
-              <li className="section__photo--link border-palette-g3">
+              <li
+                className={`section__photo--link border-palette-${props.paletteValue}3`}
+              >
                 <a
                   className="section__photo--icon js-photoPhone"
                   href=""
                   target="_blank"
                 >
-                  <i className="fas fa-mobile-alt"></i>
+                  <i
+                    className={`fas fa-mobile-alt color-palette-${props.paletteValue}1`}
+                  ></i>
                 </a>
               </li>
-              <li className="section__photo--link border-palette-g3">
+              <li
+                className={`section__photo--link border-palette-${props.paletteValue}3`}
+              >
                 <a
-                  className="section__photo--icon js-photoEmail"
+                  className="section__photo--icon js-photoEmail "
                   href=""
                   target="_blank"
                 >
-                  <i className="far fa-envelope"></i>
+                  <i
+                    className={`far fa-envelope color-palette-${props.paletteValue}1`}
+                  ></i>
                 </a>
               </li>
-              <li className="section__photo--link border-palette-g3">
+              <li
+                className={`section__photo--link border-palette-${props.paletteValue}3`}
+              >
                 <a
                   className="section__photo--icon js-photoLinkedin"
                   href="https://es.linkein.com/in/"
                   target="_blank"
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                  <i
+                    className={`fab fa-linkedin-in color-palette-${props.paletteValue}1`}
+                  ></i>
                 </a>
               </li>
-              <li className="section__photo--link border-palette-g3">
+              <li
+                className={`section__photo--link border-palette-${props.paletteValue}3`}
+              >
                 <a
                   className="section__photo--icon js-photoGithub"
                   href="https://github.com/"
                   target="_blank"
                 >
-                  <i className="fab fa-github-alt"></i>
+                  <i
+                    className={`fab fa-github-alt color-palette-${props.paletteValue}1`}
+                  ></i>
                 </a>
               </li>
             </ul>
