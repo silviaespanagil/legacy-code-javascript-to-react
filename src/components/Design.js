@@ -4,20 +4,21 @@ import "../stylesheets/App.scss";
 
 function Design(props) {
   //desplegable
+
   const [className, setClassName] = useState("collapsible--close");
 
   const handleClick = () => {
-    console.log("hice clic");
-    setClassName((prevState) => {
+    setClassName(() => {
       let changeClass =
-        prevState.className === "collapsible--close"
+        className === "collapsible--close"
           ? "collapsible--open"
           : "collapsible--close";
-      return { className: changeClass };
+      return changeClass;
     });
   };
 
   //Fin desplegable
+
   return (
     <>
       <section className="section__design" onClick={handleClick}>
