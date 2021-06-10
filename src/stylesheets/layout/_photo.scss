@@ -91,6 +91,9 @@
   color: $color-primary;
 }
 .section__photo--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
   font-size: 18px;
