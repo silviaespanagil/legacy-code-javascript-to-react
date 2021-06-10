@@ -5,24 +5,11 @@ import Share from "./Share.js";
 import "../stylesheets/App.scss";
 
 function Form(props) {
-  /* const [className, setClassName] = useState("collapsible--close");
-
-  const handleClick = () => {
-    console.log("hice clic");
-    setClassName((prevState) => {
-      let changeClass =
-        prevState.className === "collapsible--close"
-          ? "collapsible--open"
-          : "collapsible--close";
-      return { className: changeClass };
-    });
-  };*/
-
   return (
     <>
       <section className="sectionForm">
         <form className="main-cards__form">
-          <Design /*handlerCollapsable={handleClick} className={className}*/ />
+          <Design />
           <Fill />
           <Share />
         </form>
