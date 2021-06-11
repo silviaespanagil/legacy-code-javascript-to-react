@@ -35,8 +35,10 @@ class Fill extends React.Component {
           </div>
           <div className={` js-collapsible ${this.state.className}`}>
             <section className="formf__box js-fillform" action="" method="POST">
-              <label for="full-name">Nombre completo</label>
+              <label htmlFor="full-name">Nombre completo</label>
               <input
+                onKeyUp={this.props.handleName}
+                id="full-name"
                 className="name js-fullName"
                 placeholder="Ej: Sally Hill"
                 type="text"
@@ -44,19 +46,20 @@ class Fill extends React.Component {
                 required
               />
 
-              <label for="">Puesto</label>
+              <label htmlFor="job">Puesto</label>
               <input
+                onKeyUp={this.props.handleJob}
                 className="js-fillJob"
-                value=""
                 placeholder="Ej: Front-End unicorn"
                 type="text"
                 name="job"
+                id="job"
                 required
               />
 
               <div className="formf__box--label">Imagen de perfil</div>
               <div className="formf__box--container">
-                <label className="formf__box--button" for="img-selector">
+                <label className="formf__box--button" htmlFor="img-selector">
                   Añadir imagen
                 </label>
                 <input
@@ -73,8 +76,9 @@ class Fill extends React.Component {
                 ></div>
               </div>
 
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
+                onKeyUp={this.props.handleMail}
                 className="js-input-email"
                 placeholder="Ej: sally-hill@gmail.com"
                 type="email"
@@ -82,8 +86,9 @@ class Fill extends React.Component {
                 required
               />
 
-              <label for="">Teléfono</label>
+              <label htmlFor="">Teléfono</label>
               <input
+                onKeyUp={this.props.handlePhone}
                 className="js-input-phone"
                 placeholder="Ej: 555-55-55-55"
                 type="tel"
@@ -91,8 +96,9 @@ class Fill extends React.Component {
                 required
               />
 
-              <label for="">LinkedIn</label>
+              <label htmlFor="">LinkedIn</label>
               <input
+                onKeyUp={this.props.handleLi}
                 className="js-input-linkedin"
                 placeholder="Ej: linkedin.com/in/sally.hill"
                 type="text"
@@ -100,8 +106,9 @@ class Fill extends React.Component {
                 required
               />
 
-              <label for="">Github</label>
+              <label htmlFor="">Github</label>
               <input
+                onKeyUp={this.props.handleGithub}
                 className="js-input-github"
                 placeholder="Ej: @sally-hill"
                 href="https://github.com/"

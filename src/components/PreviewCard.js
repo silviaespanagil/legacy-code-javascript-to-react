@@ -15,10 +15,10 @@ function CardPreview(props) {
             <h3
               className={`section__photo--name js-photoFullName   color-palette-${props.paletteValue}1`}
             >
-              nombre apellido
+              {props.nameValue}
             </h3>
             <h4 className="section__photo--job js-photoJob">
-              Front-end developer
+              {props.jobValue}
             </h4>
           </div>
           <div className="section__photo--img">
@@ -35,7 +35,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoPhone"
-                  href=""
+                  href={props.phoneValue}
                   target="_blank"
                 >
                   <i
@@ -48,7 +48,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoEmail "
-                  href=""
+                  href={props.mailValue}
                   target="_blank"
                 >
                   <i
@@ -61,7 +61,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoLinkedin"
-                  href="https://es.linkein.com/in/"
+                  href={`https://es.linkein.com/in/${props.liValue}`}
                   target="_blank"
                 >
                   <i
@@ -74,7 +74,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoGithub"
-                  href="https://github.com/"
+                  href={`https://github.com/${props.githubValue}`}
                   target="_blank"
                 >
                   <i
