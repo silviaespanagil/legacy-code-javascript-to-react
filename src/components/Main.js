@@ -5,35 +5,44 @@ import CardPreview from "./PreviewCard.js";
 
 function Main() {
   let [PaletteValue, setPalette] = useState("g");
-  let [nameValue, setName] = useState("Nombre completo");
-  let [jobValue, setJob] = useState("Front-end Developer");
+  let [nameValue, setName] = useState("");
+  let [jobValue, setJob] = useState("");
   let [mailValue, setMail] = useState("");
-  let [phoneValue, setPhone] = useState("+34");
+  let [phoneValue, setPhone] = useState("");
   let [liValue, setLi] = useState("www.linkedin.com");
   let [githubValue, setGithub] = useState("www.github.com");
 
   let handlePalette = (ev) => {
-    setPalette((PaletteValue = ev.currentTarget.value));
+    setPalette(ev.currentTarget.value);
   };
 
   let handleName = (ev) => {
-    setName((nameValue = ev.currentTarget.value));
+    setName(ev.currentTarget.value);
   };
 
   let handleJob = (ev) => {
-    setJob((jobValue = ev.currentTarget.value));
+    setJob(ev.currentTarget.value);
   };
   let handleMail = (ev) => {
-    setMail((mailValue = ev.currentTarget.value));
+    setMail(ev.currentTarget.value);
   };
   let handlePhone = (ev) => {
-    setPhone((phoneValue = ev.currentTarget.value));
+    setPhone(ev.currentTarget.value);
   };
   let handleLi = (ev) => {
-    setLi((liValue = ev.currentTarget.value));
+    setLi(ev.currentTarget.value);
   };
   let handleGithub = (ev) => {
-    setGithub((githubValue = ev.currentTarget.value));
+    setGithub(ev.currentTarget.value);
+  };
+
+  const handleButton = () => {
+    setName("");
+    setJob("");
+    setMail("");
+    setPhone("");
+    setLi("");
+    setGithub("");
   };
 
   return (
@@ -48,8 +57,15 @@ function Main() {
             phoneValue={phoneValue}
             liValue={liValue}
             githubValue={githubValue}
+            handleButton={handleButton}
           />
           <Form
+            nameValue={nameValue}
+            jobValue={jobValue}
+            mailValue={mailValue}
+            phoneValue={phoneValue}
+            liValue={liValue}
+            githubValue={githubValue}
             handlePalette={handlePalette}
             handleName={handleName}
             handleMail={handleMail}

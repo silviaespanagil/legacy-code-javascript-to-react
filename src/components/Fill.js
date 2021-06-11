@@ -37,24 +37,26 @@ class Fill extends React.Component {
             <section className="formf__box js-fillform" action="" method="POST">
               <label htmlFor="full-name">Nombre completo</label>
               <input
-                onKeyUp={this.props.handleName}
+                onChange={this.props.handleName}
                 id="full-name"
                 className="name js-fullName"
                 placeholder="Ej: Sally Hill"
                 type="text"
                 name="name"
                 required
+                value={this.props.nameValue}
               />
 
               <label htmlFor="job">Puesto</label>
               <input
-                onKeyUp={this.props.handleJob}
+                onChange={this.props.handleJob}
                 className="js-fillJob"
                 placeholder="Ej: Front-End unicorn"
                 type="text"
                 name="job"
                 id="job"
                 required
+                value={this.props.jobValue}
               />
 
               <div className="formf__box--label">Imagen de perfil</div>
@@ -78,43 +80,47 @@ class Fill extends React.Component {
 
               <label htmlFor="email">Email</label>
               <input
-                onKeyUp={this.props.handleMail}
+                onChange={this.props.handleMail}
                 className="js-input-email"
                 placeholder="Ej: sally-hill@gmail.com"
                 type="email"
                 name="email"
                 required
+                value={this.props.mailValue}
               />
 
               <label htmlFor="">Teléfono</label>
               <input
-                onKeyUp={this.props.handlePhone}
+                onChange={this.props.handlePhone}
                 className="js-input-phone"
                 placeholder="Ej: 555-55-55-55"
                 type="tel"
                 name="phone"
                 required
+                value={this.props.phoneValue}
               />
 
               <label htmlFor="">LinkedIn</label>
               <input
-                onKeyUp={this.props.handleLi}
+                onChange={this.props.handleLi}
                 className="js-input-linkedin"
                 placeholder="Ej: linkedin.com/in/sally.hill"
                 type="text"
                 name="linkedin"
                 required
+                value={this.props.liValue}
               />
 
               <label htmlFor="">Github</label>
               <input
-                onKeyUp={this.props.handleGithub}
+                onChange={this.props.handleGithub}
                 className="js-input-github"
                 placeholder="Ej: @sally-hill"
                 href="https://github.com/"
                 type="text"
                 name="github"
                 required
+                value={this.props.githubValue}
               />
             </section>
           </div>

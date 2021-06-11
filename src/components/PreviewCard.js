@@ -5,7 +5,11 @@ function CardPreview(props) {
   return (
     <>
       <section className="section__photo">
-        <button className="section__photo--button js-photoReset" id="reset">
+        <button
+          className="section__photo--button js-photoReset"
+          id="reset"
+          onClick={props.handleButton}
+        >
           <i className="far fa-trash-alt icongarbage"></i>reset
         </button>
         <article className="section__photo--card">
@@ -15,10 +19,10 @@ function CardPreview(props) {
             <h3
               className={`section__photo--name js-photoFullName   color-palette-${props.paletteValue}1`}
             >
-              {props.nameValue}
+              {props.nameValue || "Nombre Completo"}
             </h3>
             <h4 className="section__photo--job js-photoJob">
-              {props.jobValue}
+              {props.jobValue || "Front-end Developer"}
             </h4>
           </div>
           <div className="section__photo--img">
@@ -35,7 +39,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoPhone"
-                  href={props.phoneValue}
+                  href={props.phoneValue || "+34"}
                   target="_blank"
                 >
                   <i
