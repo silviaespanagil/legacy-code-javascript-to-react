@@ -1,4 +1,5 @@
 import React from "react";
+import GetAvatar from "./GetAvatar";
 import "../stylesheets/App.scss";
 
 class Fill extends React.Component {
@@ -64,11 +65,12 @@ class Fill extends React.Component {
                 <label className="formf__box--button" htmlFor="img-selector">
                   Añadir imagen
                 </label>
-                <input
+                <GetAvatar />
+                {/* <input
                   id="img-selector"
                   className="js__profile-upload-btn formf__box--inputFile"
                   type="file"
-                />
+                 /> */}
 
                 <div
                   className="formf__box--previewimg js__profile-preview"

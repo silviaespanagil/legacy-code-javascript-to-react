@@ -65,7 +65,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoLinkedin"
-                  href={`https://es.linkein.com/in/${props.liValue}`}
+                  href={`https://es.linkedin.com/in/${props.liValue}`}
                   target="_blank"
                 >
                   <i
