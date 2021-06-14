@@ -1,7 +1,10 @@
 import React from "react";
+import defaultAvatar from "../images/vegan-deburguer-photo.jpg";
 import "../stylesheets/App.scss";
 
 function CardPreview(props) {
+  const image = props.image === "" ? defaultAvatar : props.image;
+
   return (
     <>
       <section className="section__photo">
@@ -28,6 +31,7 @@ function CardPreview(props) {
           <div className="section__photo--img">
             <div
               className="section__photo--image js__profile-image"
+              style={{ backgroundImage: `url(${image})` }}
               alt="photograph"
             ></div>
           </div>

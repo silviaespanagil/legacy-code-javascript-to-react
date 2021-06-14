@@ -68,13 +68,13 @@ class GetAvatar extends React.Component {
   render() {
     const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
     return (
-      <div className="get-avatar">
-        <label className="get-avatar__label" type="button">
-          Get avatar!
+      <div className="formf__box--container">
+        <label className="formf__box--button" type="button">
+          Cargar imagen
           <input
             type="file"
             ref={this.myFileField}
-            className="get-avatar__upload-field"
+            className="js__profile-upload-btn formf__box--inputFile"
             onChange={this.uploadImage}
           />
         </label>

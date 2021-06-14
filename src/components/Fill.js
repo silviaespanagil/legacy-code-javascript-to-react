@@ -59,18 +59,21 @@ class Fill extends React.Component {
                 required
                 value={this.props.jobValue}
               />
-
-              <div className="formf__box--label">Imagen de perfil</div>
+              <GetAvatar
+                avatar={this.props.image}
+                updateAvatar={this.props.updateAvatar}
+              />
+              {/*<div className="formf__box--label">Imagen de perfil</div>
               <div className="formf__box--container">
                 <label className="formf__box--button" htmlFor="img-selector">
                   Añadir imagen
                 </label>
-                <GetAvatar />
+
                 {/* <input
                   id="img-selector"
                   className="js__profile-upload-btn formf__box--inputFile"
                   type="file"
-                 /> */}
+                 /> 
 
                 <div
                   className="formf__box--previewimg js__profile-preview"
@@ -78,7 +81,7 @@ class Fill extends React.Component {
                   src=""
                   alt=""
                 ></div>
-              </div>
+              </div>*/}
 
               <label htmlFor="email">Email</label>
               <input

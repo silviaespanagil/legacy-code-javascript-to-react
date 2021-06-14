@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../stylesheets/App.scss";
 import Form from "./Form.js";
 import CardPreview from "./PreviewCard.js";
 
@@ -11,6 +10,7 @@ function Main() {
   let [phoneValue, setPhone] = useState("");
   let [liValue, setLi] = useState("www.linkedin.com");
   let [githubValue, setGithub] = useState("www.github.com");
+  const [image, setImage] = useState("");
 
   let handlePalette = (ev) => {
     setPalette(ev.currentTarget.value);
@@ -36,6 +36,10 @@ function Main() {
     setGithub(ev.currentTarget.value);
   };
 
+  const updateAvatar = (avatar) => {
+    setImage(avatar);
+  };
+
   const handleButton = () => {
     setName("");
     setJob("");
@@ -43,6 +47,7 @@ function Main() {
     setPhone("");
     setLi("");
     setGithub("");
+    setImage("");
   };
 
   return (
@@ -53,6 +58,7 @@ function Main() {
             paletteValue={PaletteValue}
             nameValue={nameValue}
             jobValue={jobValue}
+            image={image}
             mailValue={mailValue}
             phoneValue={phoneValue}
             liValue={liValue}
@@ -60,6 +66,8 @@ function Main() {
             handleButton={handleButton}
           />
           <Form
+            updateAvatar={updateAvatar}
+            image={image}
             nameValue={nameValue}
             jobValue={jobValue}
             mailValue={mailValue}

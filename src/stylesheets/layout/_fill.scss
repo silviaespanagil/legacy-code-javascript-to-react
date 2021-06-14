@@ -51,6 +51,8 @@
     &--container {
       display: flex;
       flex-direction: row;
+      align-items: center;
+      padding-bottom: 20px;
     }
 
     &--inputFile {
@@ -66,7 +68,6 @@
       cursor: pointer;
       text-align: center;
       line-height: 30px;
-      margin-bottom: 20px;
     }
 
     &--previewimg {
