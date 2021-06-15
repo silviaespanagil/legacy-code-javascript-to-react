@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Design from "./Design.js";
 import Fill from "./Fill.js";
 import Share from "./Share.js";
-import "../stylesheets/App.scss";
 
 function Form(props) {
   return (

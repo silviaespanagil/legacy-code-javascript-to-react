@@ -93,3 +93,14 @@ input {
 label {
   color: $color-palette-g1;
 }
+
+.get-avatar__preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px $color-palette-g3;
+  height: 50px;
+  margin-left: 15px;
+  width: 50px;
+}

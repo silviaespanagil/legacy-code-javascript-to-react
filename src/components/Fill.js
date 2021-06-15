@@ -1,6 +1,5 @@
 import React from "react";
 import GetAvatar from "./GetAvatar";
-import "../stylesheets/App.scss";
 
 class Fill extends React.Component {
   constructor(props) {
@@ -63,6 +62,7 @@ class Fill extends React.Component {
                 avatar={this.props.image}
                 updateAvatar={this.props.updateAvatar}
               />
+
               {/*<div className="formf__box--label">Imagen de perfil</div>
               <div className="formf__box--container">
                 <label className="formf__box--button" htmlFor="img-selector">

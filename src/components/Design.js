@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Palettes from "./Palettes.js";
-import "../stylesheets/App.scss";
 
 function Design(props) {
   //desplegable

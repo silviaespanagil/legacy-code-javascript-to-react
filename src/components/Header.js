@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheets/App.scss";
 import logoVegan from "../images/vegan-deburguer-icon.png";
 
 class Header extends React.Component {

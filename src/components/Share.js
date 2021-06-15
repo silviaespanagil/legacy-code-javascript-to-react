@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheets/App.scss";
 
 class Share extends React.Component {
   constructor(props) {

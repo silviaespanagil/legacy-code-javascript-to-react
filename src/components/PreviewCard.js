@@ -1,6 +1,5 @@
 import React from "react";
 import defaultAvatar from "../images/vegan-deburguer-photo.jpg";
-import "../stylesheets/App.scss";
 
 function CardPreview(props) {
   const image = props.image === "" ? defaultAvatar : props.image;
@@ -15,6 +14,7 @@ function CardPreview(props) {
         >
           <i className="far fa-trash-alt icongarbage"></i>reset
         </button>
+
         <article className="section__photo--card">
           <div
             className={`section__photo--boxnamejob border-palette-${props.paletteValue}2`}
@@ -24,10 +24,12 @@ function CardPreview(props) {
             >
               {props.nameValue || "Nombre Completo"}
             </h3>
+
             <h4 className="section__photo--job js-photoJob">
               {props.jobValue || "Front-end Developer"}
             </h4>
           </div>
+
           <div className="section__photo--img">
             <div
               className="section__photo--image js__profile-image"
@@ -56,7 +58,7 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoEmail "
-                  href={props.mailValue}
+                  href={props.mailValue || "mailto:"}
                   target="_blank"
                 >
                   <i
@@ -69,7 +71,10 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoLinkedin"
-                  href={`https://es.linkedin.com/in/${props.liValue}`}
+                  href={
+                    `https://es.linkedin.com/in/${props.liValue}` ||
+                    "https://es.linkedin.com/in"
+                  }
                   target="_blank"
                 >
                   <i
@@ -82,7 +87,10 @@ function CardPreview(props) {
               >
                 <a
                   className="section__photo--icon js-photoGithub"
-                  href={`https://github.com/${props.githubValue}`}
+                  href={
+                    `https://github.com/${props.githubValue}` ||
+                    "https://es.linkedin.com/in"
+                  }
                   target="_blank"
                 >
                   <i
