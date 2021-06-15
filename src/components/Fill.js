@@ -109,11 +109,11 @@ class Fill extends React.Component {
               <input
                 onChange={this.props.handleLi}
                 className="js-input-linkedin"
+                href="https://www.linkedin.com/"
                 placeholder="Ej: linkedin.com/in/sally.hill"
                 type="text"
                 name="linkedin"
                 required
-                value={this.props.liValue}
               />
 
               <label htmlFor="">Github</label>
@@ -125,7 +125,6 @@ class Fill extends React.Component {
                 type="text"
                 name="github"
                 required
-                value={this.props.githubValue}
               />
             </section>
           </div>
