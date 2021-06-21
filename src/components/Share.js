@@ -5,7 +5,6 @@ class Share extends React.Component {
   constructor(props) {
     super(props);
     this.state = { className: "collapsible--close", url: "" };
-
     this.handleClick = this.handleClick.bind(this);
     this.handleShare = this.handleShare.bind(this);
   }
@@ -22,9 +21,8 @@ class Share extends React.Component {
 
   handleShare(ev) {
     ev.preventDefault();
-
-    console.log(this.props);
-    let data = {
+    this.data = this.props;
+    /*let data = {
       name: this.props.name,
       job: this.props.job,
       phone: this.props.phone,
@@ -32,17 +30,21 @@ class Share extends React.Component {
       linkedin: this.props.linkedin,
       github: this.props.github,
       photo: this.props.photo,
-    };
+    };*/
 
-    FetchData(data).then((response) => {
-      if (response.success === false) {
+    FetchData(this.data).then((response) => {
+      if (response.success !== false) {
+        console.log(this.data);
         console.log("faltandatos");
       } else {
-        this.setState({ url: response.cardURL });
+        console.log("Se envio bien yupi");
+        console.log(this.data);
+        return this.setState({ url: response.cardURL });
       }
     });
+    //Si nos da ok pq no da el link -- tampoco da ok :S
+    console.log(`${this.state.url}`);
   }
-
   render() {
     return (
       <>
