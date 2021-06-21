@@ -1,5 +1,5 @@
 const cardApi = "https://awesome-profile-cards.herokuapp.com/card";
-const FetchData = () => {
+const FetchData = (data) => {
   const requestOption = {
     method: "POST",
     headers: { "Content-Type": "application/json" },

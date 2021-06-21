@@ -1,13 +1,16 @@
 import React from "react";
+import FetchData from "../services/FetchData.js";
 
 class Share extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { className: "collapsible--close" };
+    this.state = { className: "collapsible--close", url: "" };
+
     this.handleClick = this.handleClick.bind(this);
+    this.handleShare = this.handleShare.bind(this);
   }
+
   handleClick() {
-    console.log("hice clic");
     this.setState((prevState) => {
       let changeClass =
         prevState.className === "collapsible--close"
@@ -16,15 +19,30 @@ class Share extends React.Component {
       return { className: changeClass };
     });
   }
-  /*constructor(props) {
-    super(props);
-    this.state = { className: this.props.state.className };
-    this.handleOnClick = this.handleOnClick.bind(this);
+
+  handleShare(ev) {
+    ev.preventDefault();
+
+    console.log(this.props);
+    let data = {
+      name: this.props.name,
+      job: this.props.job,
+      phone: this.props.phone,
+      email: this.props.email,
+      linkedin: this.props.linkedin,
+      github: this.props.github,
+      photo: this.props.photo,
+    };
+
+    FetchData(data).then((response) => {
+      if (response.success === false) {
+        console.log("faltandatos");
+      } else {
+        this.setState({ url: response.cardURL });
+      }
+    });
   }
 
-  handleOnClick() {
-    this.props.handleClick();
-  }*/
   render() {
     return (
       <>
@@ -51,6 +69,7 @@ class Share extends React.Component {
                 className="share__create--button js-create-btn"
                 type="submit"
                 value="Generar tarjeta"
+                onClick={this.handleShare}
               >
                 <i className="far fa-address-card" title="Crea"></i>
                 Crear tarjeta
@@ -59,7 +78,10 @@ class Share extends React.Component {
 
             <div className="share__result js-twitter-share js-share-hidden js-card-result">
               <p className="share__result--title">La tarjeta ha sido creada:</p>
-              <a className="share__result--link js-card-link" href=""></a>
+              <a
+                className="share__result--link js-card-link"
+                href={this.state.url}
+              ></a>
               <button className="share__result--twitter js-twitter-btn">
                 <i className="fa fa-twitter" title="Comparte en Twitter"></i>
                 <a

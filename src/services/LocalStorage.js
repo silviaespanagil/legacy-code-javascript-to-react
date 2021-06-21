@@ -1,5 +1,5 @@
-const get = () => {};
+// const get = () => {};
 
-const set = () => {};
+// const set = () => {};
 
-const LocalStorage = { get: get, set: set };
+// const LocalStorage = { get: get, set: set };
