@@ -47,6 +47,7 @@ function CardPreview(props) {
                   className="section__photo--icon js-photoPhone"
                   href={props.phoneValue || "+34"}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i
                     className={`fas fa-mobile-alt color-palette-${props.paletteValue}1`}
@@ -60,6 +61,7 @@ function CardPreview(props) {
                   className="section__photo--icon js-photoEmail "
                   href={props.mailValue || "mailto:"}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i
                     className={`far fa-envelope color-palette-${props.paletteValue}1`}
@@ -76,6 +78,7 @@ function CardPreview(props) {
                     "https://es.linkedin.com/in"
                   }
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i
                     className={`fab fa-linkedin-in color-palette-${props.paletteValue}1`}
@@ -92,6 +95,7 @@ function CardPreview(props) {
                     "https://es.linkedin.com/in"
                   }
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i
                     className={`fab fa-github-alt color-palette-${props.paletteValue}1`}

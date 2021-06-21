@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Design from "./Design.js";
 import Fill from "./Fill.js";
 import Share from "./Share.js";
@@ -15,8 +15,6 @@ function Form(props) {
       </section>
     </>
   );
-}
-{
 }
 
 export default Form;

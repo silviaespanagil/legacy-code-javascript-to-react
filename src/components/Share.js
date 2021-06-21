@@ -67,6 +67,7 @@ class Share extends React.Component {
                   className="share__result--twitterlink js-twitter-link"
                   data-show-count="false"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Compartir en twitter
                 </a>

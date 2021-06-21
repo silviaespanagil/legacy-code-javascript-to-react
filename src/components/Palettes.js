@@ -3,7 +3,7 @@ import React from "react";
 function Palettes(props) {
   return (
     <>
-      <label className="section__desing--boxcolor" for="colorpalette1">
+      <label className="section__desing--boxcolor" htmlFor="colorpalette1">
         <input
           onChange={props.handlePalette}
           className="section__design--check js-colorPalette1"
@@ -17,7 +17,7 @@ function Palettes(props) {
           <li className="box color1-3"></li>
         </ul>
       </label>
-      <label className="section__desing--boxcolor" for="colorpalette2">
+      <label className="section__desing--boxcolor" htmlFor="colorpalette2">
         <input
           onChange={props.handlePalette}
           className="section__design--check js-colorPalette2"
@@ -31,7 +31,7 @@ function Palettes(props) {
           <li className="box color2-3"></li>
         </ul>
       </label>
-      <label className="section__desing--boxcolor" for="colorpalette3">
+      <label className="section__desing--boxcolor" htmlFor="colorpalette3">
         <input
           onChange={props.handlePalette}
           className="section__design--check js-colorPalette3"
