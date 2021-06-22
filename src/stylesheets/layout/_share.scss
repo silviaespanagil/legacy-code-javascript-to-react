@@ -30,6 +30,13 @@
     }
   }
 
+  &__loading {
+    padding: 30px;
+    font-size: 16px;
+    color: $color-primary;
+    font-family: "Open Sans", sans-serif;
+  }
+
   &__arrow {
     color: $color-secondary;
     font-size: 18px;
