@@ -1,0 +1,108 @@
+.section__photo {
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1594349835151-8b9d5eec19b1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fHZlZ2V0YWJsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  padding: 38px 35px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  @media all and(min-width: 768px) {
+    width: 50%;
+    height: 812px;
+    margin-right: 40px;
+  }
+  @media all and (min-width: 1000px) {
+    width: 600px;
+  }
+}
+.section__photo--button {
+  width: 75px;
+  height: 30px;
+  font-family: $font-primary;
+  font-size: 12px;
+  color: $color-background-cards;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 1px solid $color-background-cards;
+  background-color: #0c5c5c;
+  margin-bottom: 20px;
+  transform: translate(-80px);
+
+  @media all and (min-width: 768px) {
+    transform: translate(-82px);
+  }
+}
+.icongarbage {
+  font-size: 12px;
+  margin-right: 8px;
+}
+.section__photo--card {
+  background-color: $color-background-cards;
+  padding-top: 21px;
+  border-radius: 15px solid black;
+  width: 240px;
+
+  @media all and (min-width: 768px) {
+    margin-left: 25px;
+    margin-right: 24px;
+    margin-bottom: 220px;
+  }
+}
+.section__photo--boxnamejob {
+  border-left: 5px solid;
+  padding: 0px 20px 0px 14px;
+  margin-bottom: 10px;
+  color: $color-palette-g1;
+}
+
+.section__photo--name {
+  font-family: $font-cards;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding-bottom: 4px;
+}
+
+.section__photo--job {
+  font-family: $font-cards;
+  font-size: 16px;
+  color: $color-secondary;
+}
+
+.section__photo--image {
+  background-image: url("../../images/vegan-deburguer-photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.section__photo--nav {
+  padding: 10px 20px 12px 20px;
+}
+.section__photo--list {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: $color-primary;
+}
+.section__photo--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  border: 1.5px solid;
+  border-radius: 20px;
+  margin-right: 10px;
+  padding-top: 2px;
+}
+.section__photo--icon {
+  font-size: 18px;
+  color: $color-primary;
+}
