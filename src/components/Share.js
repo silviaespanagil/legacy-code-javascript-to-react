@@ -25,14 +25,16 @@ class Share extends React.Component {
 
     console.log(this.props);
     let data = {
-      name: this.props.name,
-      job: this.props.job,
-      phone: this.props.phone,
-      email: this.props.email,
-      linkedin: this.props.linkedin,
-      github: this.props.github,
-      photo: this.props.photo,
+      name: this.props.nameValue,
+      job: this.props.jobValue,
+      phone: this.props.phoneValue,
+      email: this.props.mailValue,
+      linkedin: this.props.liValue,
+      github: this.props.githubValue,
+      photo: this.props.image,
     };
+
+    console.log("data->", data);
 
     FetchData(data).then((response) => {
       if (response.success === false) {
