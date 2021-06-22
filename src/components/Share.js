@@ -32,17 +32,23 @@ class Share extends React.Component {
       photo: this.props.image,
       palette: this.props.paletteValue,
     };
+
     console.log(data);
 
     FetchData(data).then((response) => {
       if (response.success === false) {
       } else {
-        // console.log("url->", response.cardURL);
         this.setState({ url: response.cardURL });
       }
-      // console.log(this.state.cardURL);
     });
-    //Si nos da ok pq no da el link -- tampoco da ok :S
+    this.setState((prevState) => {
+      let changeLink =
+        prevState.classLink ===
+        "share__result js-twitter-share js-share-hidden js-card-result"
+          ? "share__result js-twitter-share js-card-result"
+          : "share__result js-twitter-share  js-card-result";
+      return { classLink: changeLink };
+    });
   }
   render() {
     return (
@@ -77,7 +83,7 @@ class Share extends React.Component {
               </button>
             </div>
 
-            <div className="share__result js-twitter-share js-share-hidden js-card-result">
+            <div className={`${this.state.classLink}`}>
               <p className="share__result--title">La tarjeta ha sido creada:</p>
               <a
                 className="share__result--link js-card-link"
