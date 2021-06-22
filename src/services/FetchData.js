@@ -8,6 +8,7 @@ const FetchData = (data) => {
   return fetch(cardApi, requestOption)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       return data;
     });
 };

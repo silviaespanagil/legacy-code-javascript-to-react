@@ -22,7 +22,6 @@ class Share extends React.Component {
   handleShare(ev) {
     ev.preventDefault();
 
-    console.log(this.props);
     let data = {
       name: this.props.nameValue,
       job: this.props.jobValue,
@@ -31,21 +30,19 @@ class Share extends React.Component {
       linkedin: this.props.liValue,
       github: this.props.githubValue,
       photo: this.props.image,
+      palette: this.props.paletteValue,
     };
-
-    console.log("data->", data);
+    console.log(data);
 
     FetchData(data).then((response) => {
       if (response.success === false) {
-        console.log("faltandatos");
       } else {
-        console.log("Se envio bien yupi");
-        console.log(this.data);
-        return this.setState({ url: response.cardURL });
+        // console.log("url->", response.cardURL);
+        this.setState({ url: response.cardURL });
       }
+      // console.log(this.state.cardURL);
     });
     //Si nos da ok pq no da el link -- tampoco da ok :S
-    console.log(`${this.state.url}`);
   }
   render() {
     return (

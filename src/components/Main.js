@@ -3,7 +3,7 @@ import Form from "./Form.js";
 import CardPreview from "./PreviewCard.js";
 
 function Main() {
-  let [PaletteValue, setPalette] = useState("g");
+  let [paletteValue, setPalette] = useState("g");
   let [nameValue, setName] = useState("");
   let [jobValue, setJob] = useState("");
   let [mailValue, setMail] = useState("");
@@ -55,7 +55,7 @@ function Main() {
       <main className="main-cards">
         <div className="main-cards__container">
           <CardPreview
-            paletteValue={PaletteValue}
+            paletteValue={paletteValue}
             nameValue={nameValue}
             jobValue={jobValue}
             image={image}
@@ -74,6 +74,7 @@ function Main() {
             phoneValue={phoneValue}
             liValue={liValue}
             githubValue={githubValue}
+            paletteValue={paletteValue}
             handlePalette={handlePalette}
             handleName={handleName}
             handleMail={handleMail}
