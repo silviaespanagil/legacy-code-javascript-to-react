@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./Form.js";
 import CardPreview from "./PreviewCard.js";
 import ls from "../../src/services/LocalStorage";
@@ -43,6 +43,10 @@ function Main() {
     setImage(avatar);
   };
 
+  /*useEffect(() => {
+    ls.set("data", data);
+  }, [data]);
+*/
   const handleButton = () => {
     setName("");
     setJob("");
