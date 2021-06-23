@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import Form from "./Form.js";
 import CardPreview from "./PreviewCard.js";
+import ls from "../../src/services/LocalStorage";
 
 function Main() {
-  let [paletteValue, setPalette] = useState("g");
-  let [nameValue, setName] = useState("");
-  let [jobValue, setJob] = useState("");
-  let [mailValue, setMail] = useState("");
-  let [phoneValue, setPhone] = useState("");
-  let [liValue, setLi] = useState("www.linkedin.com");
-  let [githubValue, setGithub] = useState("www.github.com");
-  const [image, setImage] = useState("");
+  const lsData = ls.get("data") || {};
+
+  let [paletteValue, setPalette] = useState(lsData.palette || "g");
+  let [nameValue, setName] = useState(lsData.name || "");
+  let [jobValue, setJob] = useState(lsData.job || "");
+  let [mailValue, setMail] = useState(lsData.email || "");
+  let [phoneValue, setPhone] = useState(lsData.phone || "");
+  let [liValue, setLi] = useState(lsData.linkedin || "www.linkedin.com");
+  let [githubValue, setGithub] = useState(lsData.github || "www.github.com");
+  const [image, setImage] = useState(lsData.photo || "");
 
   let handlePalette = (ev) => {
     setPalette(ev.currentTarget.value);
