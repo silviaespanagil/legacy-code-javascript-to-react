@@ -9,6 +9,12 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  &__loading {
+    padding: 30px;
+    font-size: 16px;
+    color: $color-primary;
+    font-family: "Open Sans", sans-serif;
+  }
   &__header {
     display: flex;
     flex-direction: row;
