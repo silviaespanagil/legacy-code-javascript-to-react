@@ -4,7 +4,7 @@ import CardPreview from "./PreviewCard.js";
 import ls from "../../src/services/LocalStorage";
 
 function Main() {
-  const lsData = ls.get("data") || {};
+  const lsData = ls.get("cardData", {});
 
   let [paletteValue, setPalette] = useState(lsData.palette || "g");
   let [nameValue, setName] = useState(lsData.name || "");
@@ -42,11 +42,21 @@ function Main() {
   const updateAvatar = (avatar) => {
     setImage(avatar);
   };
+  const cardData = {
+    palette: paletteValue,
+    name: nameValue,
+    job: jobValue,
+    email: mailValue,
+    phone: phoneValue,
+    linkedin: liValue,
+    github: githubValue,
+    photo: image,
+  };
 
-  /*useEffect(() => {
-    ls.set("data", data);
-  }, [data]);
-*/
+  useEffect(() => {
+    ls.set("cardData", cardData);
+  });
+
   const handleButton = () => {
     setName("");
     setJob("");
