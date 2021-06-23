@@ -1,4 +1,4 @@
-const cardApi = "http://localhost:3000/card";
+const cardApi = "http://localhost:3001/card";
 
 const FetchData = (data) => {
   const requestOption = {
