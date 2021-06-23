@@ -85,8 +85,9 @@ class Share extends React.Component {
                   value="Generar tarjeta"
                   onClick={this.handleShare}
                 >
-                  <i className="far fa-address-card" title="Crear tarjeta"></i>
-                  Crear tarjeta
+                  <i className="far fa-address-card" title="Crear tarjeta">
+                    Crear tarjeta
+                  </i>
                 </button>
               </div>
             )}
