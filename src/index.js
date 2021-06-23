@@ -22,12 +22,12 @@ app.post("/card", (req, res) => {
       {
         name: req.body.name,
         job: req.body.job,
-        // phone: this.props.phoneValue,
-        // email: this.props.mailValue,
-        // linkedin: this.props.liValue,
-        // github: this.props.githubValue,
-        // photo: this.props.image,
-        // palette: this.props.paletteValue,
+        // phone: req.body.phone,
+        // email: req.body.email,
+        // linkedin: req.body.linkedin,
+        // github: req.body.github,
+        // photo: req.body.image,
+        // palette: req.body.palette,
       },
     ],
   };
