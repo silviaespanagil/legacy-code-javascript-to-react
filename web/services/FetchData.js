@@ -1,4 +1,5 @@
-const cardApi = "https://awesome-profile-cards.herokuapp.com/card";
+const cardApi = "http://localhost:3000/card";
+
 const FetchData = (data) => {
   const requestOption = {
     method: "POST",
