@@ -5,6 +5,7 @@ import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import Home from "./Home.js";
+import NotFound from "./NotFound.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Main />
             <Footer />
           </Route>
+          <Route path="*" component={NotFound} />
         </Switch>
       </div>
       ;
