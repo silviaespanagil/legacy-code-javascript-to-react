@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const Database = require("better-sqlite3");
 
 const app = express();
 
@@ -34,4 +35,15 @@ app.post("/card", (req, res) => {
   res.json(response);
 });
 
-const userData = [];
+// const userData = [];
+
+const db = new Database("./database.db", {
+  verbose: console.log,
+});
+
+app.get("/cards/:id", (req, res) => {
+  const query = db.prepare(`SELECT * FROM card`);
+  const data = query.all();
+
+  res.render("pages/card", data);
+});
