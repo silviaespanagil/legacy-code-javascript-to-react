@@ -4,7 +4,8 @@ import CardPreview from "./PreviewCard.js";
 import ls from "../../src/services/LocalStorage";
 
 function Main() {
-  const lsData = ls.get("cardData", {});
+  const lsData = ls.get("cardData") || {};
+  console.log(lsData);
 
   let [paletteValue, setPalette] = useState(lsData.palette || "g");
   let [nameValue, setName] = useState(lsData.name || "");
