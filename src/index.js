@@ -35,12 +35,3 @@ app.post("/card", (req, res) => {
 });
 
 const userData = [];
-
-// app.get('/card', (req, res) => {
-//   console.log("database");
-// userData.push({
-//     name:
-//     job:
-// })
-
-// });
