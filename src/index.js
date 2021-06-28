@@ -13,14 +13,14 @@ app.listen(appPort, () => {
 });
 
 const appPublicPath = "./public";
-
+// app.use(express.json());
 app.use(express.static(appPublicPath));
 
 const db = new Database("./database.db", {
   verbose: console.log,
 });
 
-app.get("/cards/:id", (req, res) => {
+app.get("/card/:id", (req, res) => {
   const query = db.prepare(`SELECT * FROM card WHERE id = ?`);
   const data = query.get(req.params.id);
   //const userId =
@@ -48,13 +48,13 @@ app.post("/card", (req, res) => {
     response.error = "Completa tu LinkedIn";
   } else if (!req.body.github || req.body.github === "") {
     response.error = "Completa tu GitHub";
-  } else if (!req.body.image || req.body.image === "") {
+  } else if (!req.body.photo || req.body.photo === "") {
     response.error = "Sube una foto";
   } else if (!req.body.palette || req.body.palette === "") {
     response.error = "Escoge tu paleta favorita";
   } else {
     const insertUser = db.prepare(
-      `INSERT INTO users (name, job, phone, email, linkedin, github, photo, palette) VALUES (?,?,?,?,?,?,?,?)`
+      `INSERT INTO card (name, job, phone, email, linkedin, github, photo, palette) VALUES (?,?,?,?,?,?,?,?)`
     );
     const result = insertUser.run(
       req.body.name,
@@ -63,13 +63,13 @@ app.post("/card", (req, res) => {
       req.body.email,
       req.body.linkedin,
       req.body.github,
-      req.body.image,
+      req.body.photo,
       req.body.palette
     );
     const userId = result.lastInsertRowid;
     const isDevelopment = process.env.NODE_ENV === "development";
     const cardURL = isDevelopment
-      ? "//localhost:3001"
+      ? "http://localhost:3001/"
       : "https://vegandebuggers.herokuapp.com/";
     response.cardURL = cardURL + "card/" + userId;
   }

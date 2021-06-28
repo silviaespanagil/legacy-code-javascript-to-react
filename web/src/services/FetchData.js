@@ -1,4 +1,4 @@
-const cardApi = "http://localhost:3000/card";
+const cardApi = "http://localhost:3001/card";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 const apiURL = isDevelopment
@@ -13,9 +13,6 @@ const FetchData = (data) => {
     .then((response) => response.json())
     .then((data) => {
       return data;
-    })
-    .catch(() => {
-      return { success: false, error: "Error al cargar la tarjeta" };
     });
 };
 

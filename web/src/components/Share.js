@@ -41,15 +41,16 @@ class Share extends React.Component {
 
     this.setState({ loading: true });
 
-    FetchData(data).then((response) => {
-      this.setState({ loading: false });
-      if (response.success) {
+    FetchData(data)
+      .then((response) => {
+        this.setState({ loading: false });
         this.setState({ url: response.cardURL });
-      } else {
+      })
+      .catch((err) => {
+        this.setState({ loading: false });
         // TODO print the error in the UI
-        console.error("error -> ", response);
-      }
-    });
+        console.error("FetchData error -> ", err);
+      });
   }
 
   render() {
@@ -96,6 +97,15 @@ class Share extends React.Component {
                 <p className="share__result--title">
                   La tarjeta ha sido creada:
                 </p>
+
+                <a
+                  className="share__result--link js-card-link"
+                  href={this.state.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {this.state.url}
+                </a>
 
                 <a
                   className="share__result--link js-card-link"
