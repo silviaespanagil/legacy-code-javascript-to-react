@@ -10,9 +10,11 @@ app.use(express.json());
 //const appPort = 3001;
 const appPort = process.env.PORT || 3001;
 
-app.listen(appPort, () => {
+app.listen(
+  appPort /*() => {
   console.log(`Server listening at http://localhost:${appPort}`);
-});
+}*/
+);
 
 const appPublicPath = "./public";
 // app.use(express.json());
