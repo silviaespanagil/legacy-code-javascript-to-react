@@ -12,80 +12,74 @@
       src="https://kit.fontawesome.com/316a162693.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/styles/app.css" />
     <title>Vegan Debuggers</title>
   </head>
   <body>
-    <section className="section__photo">
-      <article className="section__photo--card">
-        <div
-          className="section__photo--boxnamejob border-palette-<%=palette %>2"
-        >
+    <section class="section__photo">
+      <article class="section__photo--card">
+        <div class="section__photo--boxnamejob border-palette-<%=palette %>2">
           <h3
-            className="section__photo--name js-photoFullName   color-palette-<%=palette %>1"
+            class="
+              section__photo--name
+              js-photoFullName
+              color-palette-<%=palette%>1
+            "
           >
             <%=name %>
           </h3>
 
-          <h4 className="section__photo--job js-photoJob"><%=job %></h4>
+          <h4 class="section__photo--job js-photoJob"><%=job %></h4>
         </div>
 
-        <div className="section__photo--img">
+        <div class="section__photo--img">
           <div
-            className="section__photo--image js__profile-image"
+            class="section__photo--image js__profile-image"
+            style="background-image: url(<%=photo%>)"
             alt="photograph"
           ></div>
         </div>
 
-        <nav className="section__photo--nav">
-          <ul className="section__photo--list">
-            <li className="section__photo--link border-palette-<%=palette %>3">
+        <nav class="section__photo--nav">
+          <ul class="section__photo--list">
+            <li class="section__photo--link border-palette-<%=palette %>3">
               <a
-                className="section__photo--icon js-photoPhone"
-                href="<%"
-                ="phone"
-                %
+                class="section__photo--icon js-photoPhone"
+                href="<%=phone %>"
+                target="_blank"
+                rel="noreferrer"
               >
-                target="_blank" rel="noreferrer" >
-                <i
-                  className="fas fa-mobile-alt color-palette-<%=palette %>1"
-                ></i>
+                <i class="fas fa-mobile-alt color-palette-<%=palette %>1"></i>
               </a>
             </li>
-            <li className="section__photo--link border-palette-<%=palette %>3">
+            <li class="section__photo--link border-palette-<%=palette %>3">
               <a
-                className="section__photo--icon js-photoEmail "
-                href="<%"
-                ="email"
-                %
+                class="section__photo--icon js-photoEmail"
+                href="<%=email %>"
+                target="_blank"
+                rel="noreferrer"
               >
-                target="_blank" rel="noreferrer" >
-                <i className="far fa-envelope color-palette-<%=palette %>1"></i>
+                <i class="far fa-envelope color-palette-<%=palette %>1"></i>
               </a>
             </li>
-            <li className="section__photo--link border-palette-<%=palette %>3">
+            <li class="section__photo--link border-palette-<%=palette %>3">
               <a
-                className="section__photo--icon js-photoLinkedin"
-                href="<%"
-                ="linkedin"
-                %
+                class="section__photo--icon js-photoLinkedin"
+                href="<%=linkedin %>"
+                target="_blank"
+                rel="noreferrer"
               >
-                target="_blank" rel="noreferrer" >
-                <i
-                  className="fab fa-linkedin-in color-palette-<%=palette %>1"
-                ></i>
+                <i class="fab fa-linkedin-in color-palette-<%=palette %>1"></i>
               </a>
             </li>
-            <li className="section__photo--link border-palette-<%=palette %>3">
+            <li class="section__photo--link border-palette-<%=palette %>3">
               <a
-                className="section__photo--icon js-photoGithub"
-                href="<%"
-                ="github"
-                %
+                class="section__photo--icon js-photoGithub"
+                href="<%=github %>"
+                target="_blank"
+                rel="noreferrer"
               >
-                target="_blank" rel="noreferrer" >
-                <i
-                  className="fab fa-github-alt color-palette-<%=palette %>1"
-                ></i>
+                <i class="fab fa-github-alt color-palette-<%=palette %>1"></i>
               </a>
             </li>
           </ul>

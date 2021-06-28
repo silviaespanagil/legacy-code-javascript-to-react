@@ -42,8 +42,13 @@ const db = new Database("./database.db", {
 });
 
 app.get("/cards/:id", (req, res) => {
-  const query = db.prepare(`SELECT * FROM card`);
-  const data = query.all();
+  // console.log("req.params -> ", req.params);
+  const query = db.prepare(`SELECT * FROM card WHERE id = ?`);
+  const data = query.get(req.params.id);
 
-  res.render("pages/card", data);
+  if (!data) {
+    return res.sendStatus(404);
+  }
+
+  res.render("pages/card.ejs", data);
 });
