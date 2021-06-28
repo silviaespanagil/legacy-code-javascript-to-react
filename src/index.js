@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 //const appPort = 3001;
-const appPort = process.env.port || 3001;
+const appPort = process.env.PORT || 3001;
 
 app.listen(appPort, () => {
   console.log(`Server listening at http://localhost:${appPort}`);
