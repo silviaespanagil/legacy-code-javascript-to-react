@@ -1,5 +1,25 @@
-const cardApi = "http://localhost:3001/card";
+const cardApi = "http://localhost:3000/card";
 
+const isDevelopment = process.env.NODE_ENV === "development";
+const apiURL = isDevelopment
+  ? cardApi
+  : "https://vegandebuggers.herokuapp.com/card";
+const FetchData = (data) => {
+  return fetch(`${apiURL}`, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    })
+    .catch(() => {
+      return { success: false, error: "Error al cargar la tarjeta" };
+    });
+};
+
+/*
 const FetchData = (data) => {
   const requestOption = {
     method: "POST",
@@ -13,5 +33,6 @@ const FetchData = (data) => {
       return data;
     });
 };
+*/
 
 export default FetchData;
