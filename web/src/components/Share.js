@@ -119,7 +119,7 @@ class Share extends React.Component {
                 <button className="share__result--twitter js-twitter-btn">
                   <i className="fa fa-twitter" title="Comparte en Twitter"></i>
                   <a
-                    href="https://twitter.com/?lang=es"
+                    href={`https://twitter.com/intent/tweet?text="Aquí tenéis mi nueva tarjeta virtual"&url=${this.state.url}`}
                     className="share__result--twitterlink js-twitter-link"
                     data-show-count="false"
                     target="_blank"
