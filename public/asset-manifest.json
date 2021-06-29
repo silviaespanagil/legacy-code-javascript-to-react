@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.1cbbe9f6.chunk.css",
-    "main.js": "./static/js/main.998f05cd.chunk.js",
-    "main.js.map": "./static/js/main.998f05cd.chunk.js.map",
+    "main.css": "./static/css/main.8f1649e1.chunk.css",
+    "main.js": "./static/js/main.fcb26054.chunk.js",
+    "main.js.map": "./static/js/main.fcb26054.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.aa629412.js",
     "runtime-main.js.map": "./static/js/runtime-main.aa629412.js.map",
     "static/js/2.89adb312.chunk.js": "./static/js/2.89adb312.chunk.js",
     "static/js/2.89adb312.chunk.js.map": "./static/js/2.89adb312.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.1cbbe9f6.chunk.css.map": "./static/css/main.1cbbe9f6.chunk.css.map",
+    "static/css/main.8f1649e1.chunk.css.map": "./static/css/main.8f1649e1.chunk.css.map",
     "static/js/2.89adb312.chunk.js.LICENSE.txt": "./static/js/2.89adb312.chunk.js.LICENSE.txt",
     "static/media/vegan-deburguer-icon.fa1961b0.png": "./static/media/vegan-deburguer-icon.fa1961b0.png",
     "static/media/App.scss": "./static/media/vegan-deburguer-photo.0ae8fe5a.jpg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.aa629412.js",
     "static/js/2.89adb312.chunk.js",
-    "static/css/main.1cbbe9f6.chunk.css",
-    "static/js/main.998f05cd.chunk.js"
+    "static/css/main.8f1649e1.chunk.css",
+    "static/js/main.fcb26054.chunk.js"
   ]
 }
