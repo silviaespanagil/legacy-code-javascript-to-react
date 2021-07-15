@@ -4,7 +4,7 @@
 
 ¡Hola mundo!
 
-Is time to do a makeover! 💅🏼
+It's change time!
 
 Me and my team were given a code of a web app developed on Javascript with the task to refactor the whole code and migrate it to React and deploy it on Heroku. Let's begin!✨
 
@@ -33,12 +33,12 @@ Me and my team were given a code of a web app developed on Javascript with the t
 First and foremost as it was a teamwork we choose a Scrum Master within us and made a list of task and issues to follow. This list was organized by priorities ❗ and two sprints.  📅
 
 For the task that it was given we started creating a mock up of  all the components we thought we needed and started with those and then we kept on the creation as needed.
-Component creation rule was: each component for one task. We also choose to do some Class and some Functional Components as we wanted to practice with both of them.
+📏Component creation rule was: each component for one task. We also choose to do some Class and some Functional Components as we wanted to practice with both of them.
 
-Second phase was BackEnd. We created a SQLite database that it was in synchrony with the previous code and the card needs. We did then a service to fetch the data. Service works either in production as in development enviroment.
+Second phase was BackEnd 🔙. We created a SQLite database that it was in synchrony with the previous code and the card needs. We did then a service to fetch the data. Service works either in production as in development enviroment.
 The fetch data creates a Card URL that  allows the user to share the card. Backend uses Express and Better SQLite -check on dependencies to install-
 
-After all the code was refactored we deployed the code using Heroku.
+After all the code was refactored we deployed 🚀 in Heroku.
 
 
 ## Want to clone my repository? 🐑🐑
